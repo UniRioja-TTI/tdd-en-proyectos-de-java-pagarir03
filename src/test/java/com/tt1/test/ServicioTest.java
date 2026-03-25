@@ -70,6 +70,7 @@ class ServicioTest {
 	    assertDoesNotThrow(() -> servicio.agregarEmail(email));
 	}
 
+	
 	@Test
 	void testMarcarComoFinalizada() {
 		// Arrange

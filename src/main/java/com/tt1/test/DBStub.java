@@ -8,15 +8,23 @@ public class DBStub {
     private List<String> emails = new ArrayList<>();
 
     public void guardarTarea(ToDo tarea) {
-        throw new UnsupportedOperationException("Clase aún no implementada."); 
+        this.tareas.add(tarea); 
     }
-    
+
     public List<ToDo> obtenerTodas() {
-        throw new UnsupportedOperationException("Clase aún no implementada."); 
+        return this.tareas; 
+    }
+
+    public void guardarEmail(String email) {
+        this.emails.add(email);
     }
     
-    public void guardarEmail(String email) {
-        throw new UnsupportedOperationException("Clase aún no implementada."); 
+    public List<String> getEmails() {
+        return this.emails;
     }
-	
+
+    public List<ToDo> getTareas() {
+        return this.tareas;
+    }
+
 }

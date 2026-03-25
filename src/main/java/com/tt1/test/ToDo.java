@@ -6,7 +6,13 @@ public class ToDo {
     private LocalDate fechaLimite;
     private boolean completado;
 
-    // Constructores, getters y setters
+  
+    public ToDo(String nombre, String descripcion, LocalDate fechaLimite, boolean completado) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechaLimite = fechaLimite;
+        this.completado = completado;
+    }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public String getDescripcion() { return descripcion; }
