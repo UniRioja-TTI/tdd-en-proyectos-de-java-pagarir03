@@ -24,7 +24,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Generar Javadoc
-        run: javadoc -d ./docs src/*.java || javadoc -d ./docs src/main/java/com/tt1/test/*.java
+        run: |
+          mkdir -p ./docs
+          javadoc -d ./docs -sourcepath src/main/java -subpackages com.tt1.test -Xdoclint:none
 
       - name: Subir a GitHub Pages
         uses: actions/upload-pages-artifact@v3
